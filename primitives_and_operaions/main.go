@@ -147,3 +147,28 @@ func mathematicalOperators() {
 	// Type conversion is needed to allow different types to work together.
 	u = u + uint64(i) // 2
 }
+
+func boolType() {
+	var boolVar bool // Defaults to false
+
+	// Boolean variables can be used for conditionals, either
+	// on their own, or as part of a boolean expression. In this case,
+	// boolVar has not been explicitly set to anything yet, so its value is
+	// false, and the if block will not run.
+	if boolVar {
+		fmt.Println("boolVal is true.")
+	}
+
+	// Once boolVar is set to true, the same if condition will pass and the
+	// block will run.
+	boolVar = true
+	if boolVar {
+		fmt.Println("NOW boolVal is true!")
+	}
+
+	// Short declaration variables assigned to boolean expressions will be
+	// given the bool type.
+	x := 0
+	y := 1
+	v := x < y // Type: bool, value: true.
+}
